@@ -12,10 +12,13 @@
 
 ## 使用效果
 
-![1](C:\Users\yyuuq\Downloads\1.png)
-
-![2](C:\Users\yyuuq\Downloads\4.png)
-
-## 原图对比
-
-![1120](C:\Users\yyuuq\Code\wxProject\worldcup(include server)\server\public\img\1120.jpg)
+#### 主界面
+![主界面](https://github.com/demongodYY/wxFacecup/raw/master/readmepic/1.png)
+#### 选择图片
+![选择图片](https://github.com/demongodYY/wxFacecup/raw/master/readmepic/2.png)
+#### 人脸融合
+![人脸融合](https://github.com/demongodYY/wxFacecup/raw/master/readmepic/3.png)
+#### 结果
+![结果](https://github.com/demongodYY/wxFacecup/raw/master/readmepic/4.png)
+#### 原图对比
+![模板原图](C:\Users\yyuuq\Code\wxProject\worldcup(include server)\server\public\img\1120.jpg)
