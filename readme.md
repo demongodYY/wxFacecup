@@ -21,4 +21,4 @@
 #### 结果
 ![结果](https://github.com/demongodYY/wxFacecup/raw/master/readmepic/4.png)
 #### 原图对比
-![模板原图](C:\Users\yyuuq\Code\wxProject\worldcup(include server)\server\public\img\1120.jpg)
+![模板原图](https://github.com/demongodYY/wxFacecup/raw/master/server/public/img/1120.jpg)
