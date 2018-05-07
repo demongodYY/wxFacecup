@@ -25,23 +25,30 @@ router.post('/', koaBody({multipart: true}), async function(ctx) {
   const templateImg = fs.readFileSync(template.img);
   const templateImgBase64 = templateImg.toString('base64');
   await _mergeFace(imgBase64, templateImgBase64).then((res) =>{
-    const result  = {
-      name: template.name,
-      price: template.price,
-      img:  res.data.result
+    if (res.data.result) {
+      const result  = {
+        name: template.name,
+        price: template.price,
+        img:  res.data.result
+      }
+      ctx.body = result
     }
-    ctx.body = result
+    else {
+      ctx.body = 'server error';
+    }
   }).catch((err) => {
-    console.log(err);
+    console.error(err)
     ctx.body = 'server error';
   })
 });
 
 function _getIndex(imgLength, dataLength) {
   const dataIndex =  imgLength % dataLength;
+  console.log('---------------------------------choose template---------------------------------------')
   console.log('imglength: ' + imgLength);
   console.log('dataLength: ' + dataLength);
   console.log ('dataIndex: ' + dataIndex);
+  console.log('----------------------------------------------------------------------------------------')
   return dataIndex;
 }
 
@@ -55,18 +62,28 @@ async function _detectFace(base64Image) {
     const res = await axios.post('https://api-cn.faceplusplus.com/facepp/v3/detect', data);
     return res;
   } catch (err) {
+    console.error(err)
     return err;
   }
 }
 
 async function _mergeFace (base64Image, base64Template) {
-  let templateRect = ''
-  await _detectFace(base64Template).then((res) => {
-    const rect = res.data.faces[0].face_rectangle;
-    templateRect = `${rect.top},${rect.left},${rect.width},${rect.height}`
-  }).catch((err) =>{
-    throw err
-  })
+  let templateRect = '';
+  let timeout = 0;
+  while (templateRect === '' && timeout < 5) {
+    await _detectFace(base64Template).then((res) => {
+      if (res.data) {
+        const rect = res.data.faces[0].face_rectangle;
+        templateRect = `${rect.top},${rect.left},${rect.width},${rect.height}`
+      } else {
+        console.error ('can not detect template retry :' + timeout)
+      }
+    }).catch((err) =>{
+      console.error(err)
+      throw err
+    })
+    timeout++;
+  }
   const data = qs.stringify({
     api_key: apiKey,
     api_secret: apiSecret,
@@ -79,6 +96,7 @@ async function _mergeFace (base64Image, base64Template) {
       return res
   }
   catch (err) {
+    console.error(err)
     throw err
   }  
 }
