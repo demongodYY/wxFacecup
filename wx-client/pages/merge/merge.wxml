@@ -1,0 +1,15 @@
+<!--logs.wxml-->
+<view class="container merge-photo">
+  <text class="title">我的球星照片</text>
+  <view class="photo">
+      <image wx:if="{{imgSrc}}" mode="widthFix" src="{{imgSrc}}"></image> 
+  </view>
+  <view class="desc">
+     <text>{{name}}</text>
+     <text>身价：{{price}}</text>
+  </view>
+  <view class="back">
+    <button type='warn' bindtap="bindBackTap" >再来一次</button>
+  </view>
+  
+</view>

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "哈利凯恩",
+    "price": "1000万欧元",
+    "img":  "./public/img/test2.jpg"
+  }, {
+    "name": "C罗",
+    "price": "2000万欧元",
+    "img":  "./public/img/test.png"
+  }, {
+    "name": "博格巴",
+    "price": "600万欧元",
+    "img":  "./public/img/test3.jpg"
+  }
+]

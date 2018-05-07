@@ -1,0 +1,17 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+   flex-direction: column; 
+   /* align-items: center;  */
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 4.8vh 20px;
+  padding :20px 5%;
+  box-shadow:  0 1px 3px rgba(26,26,26,.1);
+} 
+
+page {
+  background-color: #f6f6f6;
+}

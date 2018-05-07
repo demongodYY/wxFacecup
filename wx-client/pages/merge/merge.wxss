@@ -1,0 +1,26 @@
+.photo{
+  width: 100%;
+  margin: 2rem 0;
+}
+.photo image{
+  width: 100%;
+}
+
+.desc {
+  display:flex;
+  flex-direction: column;
+  align-items: fles-start;  
+  justify-content: flex-start;
+}
+.desc text{
+  text-align: center;
+  line-height: 2rem;
+}
+
+.back {
+  margin: 2rem auto 1rem auto;
+  width: 50%;
+}
+.title {
+  text-align: center;
+}
