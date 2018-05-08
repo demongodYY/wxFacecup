@@ -9,8 +9,8 @@ const koaBody = require('koa-body');
 
 const router = new Router({prefix: '/images'});
 
-const apiKey = 'MshFhuCYaM0s2AUmxM9JCHg_g9VZIVRo'
-const apiSecret = 'gz3hFScrpEcMB9mym1xOmaKc0vAxuYbG'
+const apiKey = '' //face++ API
+const apiSecret = ''
 
 const templateData = require('./images_prod.json')
 
