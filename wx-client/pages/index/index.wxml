@@ -5,10 +5,9 @@
     <open-data class="userinfo-nickname" type="userNickName"></open-data>
   </view>
   <view class="banner">
-    <image src="../../images/vivo.jpg"></image>
+    <image src="../../images/worldcup.jpg"></image>
     <view class="content">
-      <text>vivo 非凡摄影师，邀您共同参与世界杯</text>
-      <text>看看你是哪一位球星？</text>
+      <text>穿越球场，看看你是哪一位球星？</text>
     </view>
   </view>
   <view class="confirm-btn">

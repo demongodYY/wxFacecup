@@ -18,8 +18,9 @@
 }
 
 .back {
-  margin: 2rem auto 1rem auto;
-  width: 50%;
+  margin: 2rem 0;
+  display: flex;
+  /* width: 50%; */
 }
 .title {
   text-align: center;

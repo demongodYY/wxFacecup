@@ -46,7 +46,10 @@
 }
 .banner .content text {
   line-height: 1.5rem;
-  font-size: .9rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: orangered;
+  background-color: rgba(200,200,200,0.8)
 }
 
 .confirm-btn {

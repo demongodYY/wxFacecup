@@ -9,7 +9,11 @@
      <text>身价：{{price}}</text>
   </view>
   <view class="back">
+    <button type="primary" open-type='share' >分享转发</button> 
     <button type='warn' bindtap="bindBackTap" >再来一次</button>
   </view>
-  
+  <button type="default" plain="true" bindtap="bindBounceTap" >给点打赏</button>
+  <dialog id="modal" title="愿意的话，可以长按二维码打赏我 :)">
+      <image src="{{bounceImg}}" style="width:100%" bindtap="previewImage"></image>
+  </dialog>
 </view>

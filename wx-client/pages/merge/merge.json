@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "世界杯明星脸"
+  "navigationBarTitleText": "世界杯明星脸",
+    "usingComponents": {
+      "dialog": "/components/dialog/dialog"
+    }
 }
